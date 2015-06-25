@@ -1,10 +1,10 @@
 FROM ubuntu:14.10
 
 RUN apt-get update &&\
-    apt-get install -y git-core subversion build-essential gcc-multilib \
-                       libncurses5-dev zlib1g-dev gawk flex gettext wget unzip python &&\
+    apt-get install -y gcc g++ binutils patch autoconf libcurl4-openssl-dev \
+                       bzip2 flex make gettext pkg-config unzip zlib1g-dev \
+                       libc6-dev subversion libncurses5-dev gawk sharutils \
+                       curl libxml-parser-perl python-yaml git ocaml-nox &&\
     apt-get clean &&\
-    useradd -m openwrt &&\
-    echo 'openwrt ALL=NOPASSWD: ALL' > /etc/sudoers.d/openwrt &&\
-    sudo -iu openwrt git clone git://git.openwrt.org/14.07/openwrt.git &&\
-    sudo -iu openwrt openwrt/scripts/feeds update
+    useradd -m u96018 &&\
+    echo 'u96018 ALL=NOPASSWD: ALL' > /etc/sudoers.d/u96018
