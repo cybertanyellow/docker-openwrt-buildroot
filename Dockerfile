@@ -9,9 +9,9 @@ RUN apt-get update &&\
     apt-get clean &&\
     useradd -m u96018 &&\
     echo 'u96018 ALL=NOPASSWD: ALL' > /etc/sudoers.d/u96018 &&\
-    sudo -iu u96018 git clone --recursive https://github.com/cybertanyellow/oh-my-vim.git ~/.vim &&\
-    sudo -iu u96018 cp ~/.vim/vimrc ~/.vimrc &&\
-    sudo -iu u96018 git clone git@github.com:cybertanyellow/oh-yellow-zsh.git ~/.oh-my-zsh &&\
-    sudo -iu u96018 cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc &&\
+    sudo -iu u96018 git clone --recursive https://github.com/cybertanyellow/oh-my-vim.git /home/u96018/.vim &&\
+    sudo -iu u96018 cp /home/u96018/.vim/vimrc /home/u96018/.vimrc &&\
+    sudo -iu u96018 git clone git@github.com:cybertanyellow/oh-yellow-zsh.git /home/u96018/.oh-my-zsh &&\
+    sudo -iu u96018 cp /home/u96018/.oh-my-zsh/templates/zshrc.zsh-template /home/u96018/.zshrc &&\
     sudo -iu u96018 chsh -s /bin/zsh
     
